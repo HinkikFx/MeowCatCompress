@@ -39,7 +39,7 @@ jobs:
           msvcArch: ${{ matrix.msvc_arch }}
         shell: pwsh
         run: |
-          pyinstaller -w -i ./src/image/icon.ico ./meowcatcompress.py -n MeowCatCompress
+          pyinstaller -w ./meowcatcompress.py -n MeowCatCompress
           xcopy /s /e /y data\qss\ dist\MeowCatCompress\data\qss\
           xcopy /s /e /y data\image\ dist\MeowCatCompress\data\image\
           xcopy /s /e /y data\translate\ dist\MeowCatCompress\data\translate\
