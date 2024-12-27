@@ -18,7 +18,8 @@ class Main(MSFluentWindow):
         self.setFixedSize(1280, 768)
         self.setWindowIcon(QIcon(cfg.ICON))
         self.handleCenterWindow()
-
+        self.compressorWidget = CompressorWidget(self)
+        self.addSubInterface(self.compressorWidget, FluentIcon.FOLDER, self.tr('压缩工具'), FluentIcon.FOLDER_OPEN)
         setTheme(cfg.get(cfg.themeMode))
         setThemeColor(cfg.get(cfg.themeColor))
 
